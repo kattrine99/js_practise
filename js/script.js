@@ -199,7 +199,33 @@ returnNeighboringNumbers(5);
 Вызов функции getMathResult(10, 0) даст ответ 10
 
 Вызов функции getMathResult(20, -5) даст ответ 20 */
-
+function getMathResult(a,b){
+   if(typeof(b)==='string'|| b<=0)
+   {
+      console.log(a);
+      return a;
+   }
+   else
+   {
+      let result='';
+      let space='---';
+      let spaceNumber=b-1;
+      let currentNum =a;
+      for(let i=0; i<b;i++)
+      {
+         result =result + currentNum;
+         if(spaceNumber>0){
+            result=result+space;
+         }
+         currentNum+=a;
+         spaceNumber--;
+      }
+      console.log(result)
+      return result;
+   }
+   
+}
+getMathResult(15,'a');
 
 //Упражнение 7
 
