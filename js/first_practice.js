@@ -1,4 +1,4 @@
-"use strict";
+/*"use strict";
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 const personalMovieDB ={
     count: numberOfFilms , 
@@ -35,4 +35,10 @@ if(personalMovieDB.count <10)
 {
     console.log("Что то не так...");
 }
-console.log(personalMovieDB);
+console.log(personalMovieDB);*/
+function sayHello(UserName) {
+    console.log("Привет, ", UserName,"!");
+    return UserName;
+ }
+ let UserName = prompt("Как тебя зовут?", '');
+ sayHello(UserName);

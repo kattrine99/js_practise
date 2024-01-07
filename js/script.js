@@ -158,11 +158,12 @@ console.log(result);
 P.S. возвращать - это использовать ключевое слово return.
 
 P.S.S. Это классическая функция-модификатор, которых мы дальше по курсу будем создавать еще много в разных видах.*/
-function sayHello(name) {
-   let UserName = console.log('Привет, '+name+'!');
+function sayHello(UserName) {
+   console.log("Привет, ", UserName,"!");
    return UserName;
 }
-sayHello('Kate');
+let UserName = prompt("Как тебя зовут?", '');
+sayHello(UserName);
 
 /*2) Создайте функцию, которая принимает в себя 1 аргумент в виде целого числа 
 и возвращает массив из трех чисел: одно на 1 меньше, сам аргумент, и число на 1 больше.
