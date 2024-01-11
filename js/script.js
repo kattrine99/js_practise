@@ -311,9 +311,27 @@ getTimeFromMinutes(50) => "Это 0 часов и 50 минут"
 getTimeFromMinutes(0) => "Это 0 часов и 0 минут"
 
 getTimeFromMinutes(-150) => "Ошибка, проверьте данные" */
-function getTimeFromMinutes() {
-
+function getTimeFromMinutes(NumofMinuts) {
+   if(NumofMinuts<0 || NumofMinuts==NaN || !Number.isInteger(NumofMinuts))
+   {
+      console.log("Ошибка, проверьте данные");
+      return 0;
+   }
+   let hour = Math.floor(NumofMinuts/60);
+   let minutes = NumofMinuts - hour*60;
+   if(hour ==0 || hour>4 && hour <=10)
+      {
+            console.log(`Это ${hour} часов и ${minutes} минут`);
+      }
+   else if(hour >1 && hour <=4 ){
+            console.log(`Это ${hour} часа и ${minutes} минут`);
+      }
+   else{ 
+            console.log(`Это ${hour} час и ${minutes} минут`);
+      }
 }
+
+getTimeFromMinutes(65);
 
 // Место для второй задачи
 /*Напишите функцию, которая принимает в себя 4 числа и возвращает самое большее из них. 
