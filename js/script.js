@@ -428,20 +428,28 @@ const personalPlanPeter = {
    skills: {
        languages: ['ru', 'eng'],
        programmingLangs: {
-           js: '20%',
-           php: '10%'
+         //   js: '20%',
+         //   php: '10%'
        },
        exp: '1 month'
+   },
+   showAgeAndLangs: function(){
+      console.log(`Мне ${personalPlanPeter.age} и я владею языками:${personalPlanPeter.skills.languages}`);
    }
 };
 const {languages,programmingLangs,exp } = personalPlanPeter.skills;
-
+personalPlanPeter.showAgeAndLangs(personalPlanPeter);
 function showExperience(plan) {
    plan = console.log(exp);
    return plan;
 }
 
 function showProgrammingLangs(plan) {
+   for (key in programmingLangs)
+   {
+      console.log(`Язык ${key} изучен на ${programmingLangs[key]}`);
+   }
 
 }
 showExperience(personalPlanPeter);
+showProgrammingLangs(showProgrammingLangs);
