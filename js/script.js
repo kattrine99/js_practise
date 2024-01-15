@@ -428,8 +428,8 @@ const personalPlanPeter = {
    skills: {
        languages: ['ru', 'eng'],
        programmingLangs: {
-         //   js: '20%',
-         //   php: '10%'
+           js: '20%',
+           php: '10%'
        },
        exp: '1 month'
    },
