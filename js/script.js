@@ -464,6 +464,7 @@ showFamily(family)  => 'Семья состоит из:
 Имена подставляются автоматически из массива. 
 Если массив пустой, то 
 выводится сообщение 'Семья пуста'
+
 2) напишите функцию standardizeStrings,
  которая будет принимать в себя массив строк
   и будет выводить в консоль эти строки 
@@ -481,12 +482,24 @@ milan
 const family = ['Peter', 'Ann', 'Alex', 'Linda'];
 
 function showFamily(arr) {
-    arr.join(" ");
-    
+   if(arr.length ===0)
+   {
+      console.log("Семья пуста");
+   }
+   else{
+      arr = family.join(" ");
+    console.log(`Семья состоит из: ${arr} `);
+   }
 }
+
 
 const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
 
 function standardizeStrings(arr) {
+   arr.forEach(city => {
+      console.log(city.toLowerCase());
+   });
     
 }
+showFamily(family);
+standardizeStrings(favoriteCities);
