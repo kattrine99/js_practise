@@ -791,7 +791,7 @@ function isOpen(prop) {
 console.log(isOpen(restorantData.openNow));
 
 function isAverageLunchPriceTrue(fDish, sDish, average) {
-   if (+fDish.price + sDish.price < average) {
+   if (+fDish.price.slice(0, -1) + (+sDish.price.slice(0, -1)) < +average.slice(0,-1)) {
        return 'Цена ниже средней';
    } else {
        return 'Цена выше средней';
@@ -803,7 +803,7 @@ console.log(isAverageLunchPriceTrue(restorantData.menu[0], restorantData.menu[1]
 function transferWaitors(data) {
    const copy = Object.assign({}, data);
 
-   copy.waitors= {name: 'Mike', age: 32};
+   copy.waitors= [{name: 'Mike', age: 32}];
    return copy;
 }
 
