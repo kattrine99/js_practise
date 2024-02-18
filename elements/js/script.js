@@ -34,4 +34,6 @@ div.classList.add('black');
 
 //circles[0].replaceWith(hearts[0]);
 
-div.innerHTML="<h4>Hello world</h4>";
+div.innerHTML="<h1>Hello world</h1>";
+
+div.insertAdjacentHTML('afterbegin', '<h2>Hello</h2>');
